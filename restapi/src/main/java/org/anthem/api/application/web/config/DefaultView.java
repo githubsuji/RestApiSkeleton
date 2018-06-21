@@ -8,7 +8,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  
 
 @Configuration
-
 public class DefaultView extends WebMvcConfigurerAdapter{
 
  

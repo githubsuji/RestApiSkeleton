@@ -19,7 +19,7 @@ public interface AttendanceRepository extends PagingAndSortingRepository<Attenda
 	 
 	 public List<Attendance> findByAttendanceDateBetween( Date attendanceDate,Date attendance);
 	 
-	 @Query("SELECT DISTINCT uploadedDate, uploadedFileName,FORMATDATETIME(DATE uploadedDate, 'yyyy-MM-dd') AS uploaded_date_formatted FROM Attendance")
+	 @Query("SELECT DISTINCT uploadedDate, uploadedFileName,uploadedDate FROM Attendance")
 	public List<Object[]> findDistinctUploadedDateAndUploadedFileName();
 	
 	 @Query("SELECT DISTINCT employeeId FROM Attendance")
